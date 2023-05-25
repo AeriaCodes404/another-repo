@@ -1,0 +1,226 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@400;500&display=swap');
+
+
+
+
+
+
+
+
+/* COLOR */
+
+/* CUSTOM VARIABLES */
+
+:root{
+    --prim-orange: hsl(31, 77%, 52%);
+    --prim-cyan: hsl(184, 100%, 22%);
+    --prim-dark-cyan: hsl(179, 100%, 13%);
+
+
+    --neu-white: hsla(0, 0%, 100%, 0.75);
+    --neu-gray: hsl(0, 0%, 95%);
+
+    --gray: #999;
+    --dark-gray: #555;
+    --black: #000;
+    --img-margin: 2.5rem;
+
+
+    --lexend-deca: 'Lexend-Deca', san-serif;
+    --big-shoulders: 'Big Shoulders Display', cursive;
+}
+
+
+
+
+
+ /* reset sheet */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+
+}
+body{ 
+
+/* positioning */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+    min-height: 100vh;
+    font-family: var(--lexend-deca);
+    background-color: var(--neu-gray);
+    font-size: 100%;
+    color:var(--neu-white);
+
+    
+/* typography */
+    /* font-family: 'Lexend Deca', sans-serif;font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;font-family: 'Big Shoulders Display', cursive */
+}
+
+
+/* CARDS */
+
+main{
+    display:flex ;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+}
+
+article{
+    max-width: 278px;
+    height: 450px;
+    padding: 42px;position: relative;
+}
+
+
+article.sedans{
+    background-color: var(--prim-orange);
+    border-radius: 7px 0 0 7px;
+}
+
+article.suvs{
+    background-color: var(--prim-cyan);
+
+}
+
+article.luxury{
+    background-color: var(--prim-dark-cyan);
+    border-radius: 0 7px 7px 0;
+}
+
+img{
+    width: 65px;
+    margin: 0 0 var(--img-margin);
+
+}
+
+h1{
+    font-family: var(--big-shoulders);
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--neu-gray);
+    margin: 0 0 1.5rem;
+
+}
+
+article p{
+    color: var(--neu-white);
+    line-height: 1.5rem;
+    font-family: var(--lexend-deca);
+    
+
+}
+
+button{
+    position: absolute;
+    bottom: 2.5rem;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    padding: .5rem;
+    width: 10rem;
+    border-radius: 1rem;
+    outline: none;
+    border: 2px solid var(--neu-gray);
+    font-family: inherit;
+    transition: all .2s ease-in-out;
+}
+
+
+.sedans button{
+    background-color: var(--neu-gray);
+    color: var(--prim-orange);
+}
+
+.suvs button{
+    background-color: var(--neu-gray);
+    color: var(--prim-cyan);
+
+}
+
+.luxury button{
+    background-color: var(--neu-gray);
+    color: var(--prim-dark-cyan);
+}
+
+button:hover{
+    background-color: transparent;
+    color: var(--neu-gray);
+
+}
+
+button:active{
+    transform: scale(.9);
+}
+
+footer{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--neu-gray);
+    font: 1rem;
+    line-height: 1rem;
+    font-family: var(--big-shoulders);
+}
+
+footer p{
+    color: gray;
+
+
+}
+
+footer a {
+    text-decoration:  none;
+    color: var(--dark-gray);
+    font-weight: 700;
+}
+
+footer a:hover{
+    color: var(--black);
+}
+
+
+
+/* MOBILE */
+
+@media only screen and (max-width: 844px) {
+    main{
+        flex-direction: column;
+        padding: 50px 0;
+    }
+    article{
+        height: 420px;
+        width: 250px;
+    }
+    article.sedans{
+        border-radius: 7px 7px 0 0 ;
+    }
+    article.suvs{
+        border-radius: 0;
+
+    }
+    article.luxury{
+        border-radius: 0 0 7px 7px;
+    }
+    article p{
+        font-size: 1rem;
+
+    }
+    footer{
+        margin:  0 0 1rem;
+    }
+
+}
